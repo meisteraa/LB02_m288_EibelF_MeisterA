@@ -4,15 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rock-Scissor-Paper</title>
-    <script type="javascript" src="main.js"></script>
+    <title>Währungsrechner</title>
+    <script src="main.js"></script>
 </head>
 <body>
-<button>Schere</button>
-<img src="bilder/schere.jpg" alt="" height="200px" width="200px">
-<button>Stein</button>
-<img src="bilder/stein.jpg" alt="" height="200px" width="200px">
-<button>Papier</button>
-<img src="bilder/papier.jpg" alt="" height="200px" width="200px">
+    <h1>Currency Converter</h1>
+    <p> Select Currency and enter Amount to convert.</p>
+    <form>
+       <label>Von:</label>
+       <select id="from">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="INR">INR</option>
+       </select>
+       <label>Zu:</label>
+       <select id="to">
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+          <option value="INR">INR</option>
+       </select>
+       <label>Wert:</label>
+       <input type="text" id="amount" />
+       <button type="button" id="convert">Convert</button>
+       <p id="result"></p>
+    </form>
+    <script>
+       const convert = document.getElementById("convert");
+       const result = document.getElementById("result");
+       const from = document.getElementById("from");
+       const to = document.getElementById("to");
+       const amount = document.getElementById("amount");
+       convert.addEventListener("click", function() {
+          let fromCurrency = from.value;
+          let toCurrency = to.value;
+          let amt = amount.value;
+          fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
+          .then(response => {
+                return response.json();
+          })
+          .then(data => {
+             let rate = data.rates[toCurrency];
+             let total = rate * amt;
+             result.innerHTML = `${amt} ${fromCurrency} = ${total}
+             ${toCurrency}`;
+          });
+       });
+    </script>
 </body>
 </html>
