@@ -1,22 +1,33 @@
-<html>
+<html lang="">
 <head>
-<title>W&aumlhrungsrechner</title>
-<script language="javascript" type="text/javascript" src="main.js"></script>
+    <title>W&aumlhrungsrechner</title>
+    <script language="javascript" type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
+<header>
+    <h1 id="titel">Währungsrechner</h1>
+</header>
 <body>
-<form>
-<input type="text" name="betrag" />
-<select name="Waehrung">
-   <option>Euro</option>
-   <option>USD</option>
-   <option>JPY</option>
-   <option>GBP</option>
-</select>
-<br>
-<input type="radio" name="umrechnung" value="nachCHF" checked="checked" />nach CHF | 
-<input type="radio" name="umrechnung" value="vonCHF" />von CHF<br/>
-<input type="button" value="Umrechnen!" onclick="umrechnen(this.form)" /> 
-<input type="text" name="ausgabe" />
-</form>
+    <div id="ganzganz">
+        <div id="ganz">
+            <form>
+            <input type="text" name="betrag" />
+                <select id="box" name="Waehrung">
+                   <option>Euro</option>
+                   <option>USD</option>
+                   <option>JPY</option>
+                   <option>GBP</option>
+                </select>
+            <br>
+            <div>
+                <input type="radio" name="umrechnung" value="nachCHF" checked="checked" /><h1>nach CHF |</h1>
+                <input type="radio" name="umrechnung" value="vonCHF" /><h1>von CHF</h1>
+                <br/>
+                <input type="button" value="Umrechnen!" onclick="umrechnen(this.form)" />
+                <input type="text" name="ausgabe" />
+            </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
