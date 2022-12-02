@@ -1,7 +1,8 @@
 let kurs = new Array();
-kurs[0] = 1.95583;
-kurs[1] = 6.55957;
-kurs[2] = 1937.98450;
+kurs[0] = 1.01492;
+kurs[1] = 1.06247;
+kurs[2] = 144.606;
+kurs[3] = 0.87265;
 
 function umrechnen(f) {
    let betrag = f.betrag.value;

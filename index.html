@@ -1,20 +1,20 @@
 <html>
 <head>
-<title>Währungsrechner</title>
-<script language="javascript" type="text/javascript" src="main.js">
-//--></script>
+<title>W&aumlhrungsrechner</title>
+<script language="javascript" type="text/javascript" src="main.js"></script>
 </head>
 <body>
 <form>
 <input type="text" name="betrag" />
 <select name="Waehrung">
-   <option>DM</option>
-   <option>Franc</option>
-   <option>Lira</option>
+   <option>Euro</option>
+   <option>USD</option>
+   <option>JPY</option>
+   <option>GBP</option>
 </select>
 <br>
-<input type="radio" name="umrechnung" value="nachEUR" checked="checked" /> nach Euro | 
-<input type="radio" name="umrechnung" value="vonEUR" /> von Euro<br />
+<input type="radio" name="umrechnung" value="nachCHF" checked="checked" />nach CHF | 
+<input type="radio" name="umrechnung" value="vonCHF" />von CHF<br/>
 <input type="button" value="Umrechnen!" onclick="umrechnen(this.form)" /> 
 <input type="text" name="ausgabe" />
 </form>
