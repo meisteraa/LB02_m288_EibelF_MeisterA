@@ -1,16 +1,22 @@
-<!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stone-Scissor-Paper</title>
+<title>W&aumlhrungsrechner</title>
+<script language="javascript" type="text/javascript" src="main.js"></script>
 </head>
 <body>
-<button>Schere</button>
-<button>Stein</button>
-<button>Papier</button>
-<button>Papier</button>
-<button>Papier</button>
+<form>
+<input type="text" name="betrag" />
+<select name="Waehrung">
+   <option>Euro</option>
+   <option>USD</option>
+   <option>JPY</option>
+   <option>GBP</option>
+</select>
+<br>
+<input type="radio" name="umrechnung" value="nachCHF" checked="checked" />nach CHF | 
+<input type="radio" name="umrechnung" value="vonCHF" />von CHF<br/>
+<input type="button" value="Umrechnen!" onclick="umrechnen(this.form)" /> 
+<input type="text" name="ausgabe" />
+</form>
 </body>
 </html>
