@@ -1,0 +1,35 @@
+<html lang="">
+<head>
+    <title>W&aumlhrungsrechner</title>
+    <script language="javascript" type="text/javascript" src="main.js"></script>
+     <script type="text/javascript" src="daten.json"></script>
+
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<header>
+    <h1 id="titel">Währungsrechner</h1>
+</header>
+<body>
+    <div id="ganzganz">
+        <div id="ganz">
+            <form>
+            <input type="text" name="betrag" />
+                <select id="box" name="Waehrung">
+                   <option>EUR</option>
+                   <option>USD</option>
+                   <option>JPY</option>
+                   <option>GBP</option>
+                </select>
+            <br>
+            <div>
+                <input type="radio" name="umrechnung" value="nachCHF" checked="checked" /><h1>nach CHF |</h1>
+                <input type="radio" name="umrechnung" value="vonCHF" /><h1>von CHF</h1>
+                <br/>
+                <input type="button" value="Umrechnen!" onclick="umrechnen(this.form)" />
+                <input type="text" name="ausgabe" />
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
