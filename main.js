@@ -1,8 +1,20 @@
-let kurs = new Array();
-kurs[0] = 1.01492;
-kurs[1] = 1.06247;
-kurs[2] = 144.606;
-kurs[3] = 0.87265;
+
+
+let meinekurse = new Array();
+
+function loadRates() {
+    $.getJSON('daten.json', function (data) {
+        meinekurse = data;});
+
+}
+  //  alert(meinekurse[0].name);
+console.log(meinekurse[0]."fx")
+//kurs[0] = 1.01492
+//kurs[1] = 1.06247;
+//kurs[2] = 144.606;
+//kurs[3] = 0.87265;
+
+
 
 function umrechnen(f) {
    let betrag = f.betrag.value;
