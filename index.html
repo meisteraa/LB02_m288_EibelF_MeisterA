@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <title>Waehrungsrechner</title>
+        <link rel="stylesheet" href="stylesheet.css">
     </head>
+    <header>
+        <h1 id="titel">Waehrungsrechner</h1>
+    </header>
     <body>
-   
-    <script language="javascript" type="text/javascript" src="main.js"></script>
-
-<br><br>
-<form>
-Betrag:    <input type="text" id="betrag" name="betrag" />
-        <select id="box" name="Waehrung">
-
-          
-        </select>
-
-
-    <br>
-    <div>
-        <input type="button" value="Umrechnen nach CHF!" onclick="berechnen('nachCHF')" />
-        <input type="button" value="Umrechnen von CHF!" onclick="berechnen('vonCHF')" />
-        <input type="text" id="ausgabe" name="ausgabe" />
-    </div>
-    </form>
-      
+        <div id="ganzganz">
+            <div id="ganz">
+                    <script language="javascript" type="text/javascript" src="main.js"></script>
+                <form>
+                    <h2>Anzahl eingeben</h2>
+                    <input type="text" id="betrag" name="betrag" />
+                    <h2>Waehrung waehlen</h2>
+                            <select id="box" name="Waehrung">
+                            </select>
+                        <div>
+                            <div id="bottum" >
+                                <input type="button" value="Umrechnen nach CHF!" onclick="berechnen('nachCHF')" />
+                                <input type="button" value="Umrechnen von CHF!" onclick="berechnen('vonCHF')" />
+                            </div>
+                                <h2>Ergebnis</h2>
+                            <input type="text" id="ausgabe" name="ausgabe" />
+                        </div>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
