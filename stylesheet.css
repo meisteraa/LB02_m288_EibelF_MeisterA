@@ -1,29 +1,53 @@
 body {
-    background: darkslategray;
+    background: #F25C05;
 }
 input {
     font-size: 30px;
 }
 h1 {
-    text-align: left;
+    text-align: center;
+    font-size: 70px;
     font-family: "Arial Black";
 }
 #box {
     font-size: 32px;
+    width: 380px;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
 }
 #titel {
     text-align: center;
     font-size: 100px;
     font-family: "Arial Black";
+    color: white;
 }
 #ganz {
     background-color: white;
     padding: 3rem;
-    width: 450px;
+    width: 400px;
     border-radius: 15px;
 }
 #ganzganz {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#bottum {
+    font-family: "Arial Black";
+    width: 380px;
+    color: white;
+    background-color: #F25C05;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: darkslategray;
+    padding: 5px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+#bottum:hover {
+    background-color: #8d3104;
+}
+h2{
+    font-family: "Arial Black";
 }
