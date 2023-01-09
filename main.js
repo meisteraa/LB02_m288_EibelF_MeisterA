@@ -19,7 +19,7 @@ fileInput.addEventListener('change', function(e) {
             kurs=jara.fxrates[i].fx;
            name=jara.fxrates[i].name;
            
-           var opt = document.createElement('option');
+           let opt = document.createElement('option');
             opt.value = kurs;
             opt.innerHTML = name +" "+kurs;
            document.getElementById('box').appendChild(opt);
