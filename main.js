@@ -1,7 +1,7 @@
 let fileInput = document.createElement('input');
 fileInput.type = 'file';
 
-
+//Aktualisiert Seite wenn Aktion passiert
 fileInput.addEventListener('change', function(e) {
   
     let file = e.target.files[0];
@@ -20,7 +20,7 @@ fileInput.addEventListener('change', function(e) {
             kurs=jara.fxrates[i].fx;
            name=jara.fxrates[i].name;
            
-           //Input Feld Eingabe
+           //Input Feld Eingabe für Kurs
            let opt = document.createElement('option');
             opt.value = kurs;
             opt.innerHTML = name +" "+kurs;
@@ -34,7 +34,7 @@ fileInput.addEventListener('change', function(e) {
    
 });
 
-// dateiberarbeitung
+// Dateibearbeitung
 document.body.appendChild(fileInput);
 text=fileInput.textContent;
 
